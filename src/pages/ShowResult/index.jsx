@@ -4,6 +4,7 @@ import { ResultContainer } from './styled';
 import MainTitle from '../../components/MainTitle';
 import ResultItem from '../../components/ResultItem';
 import MarkedText from '../../components/MarkedText';
+import CheckSaveData from '../../components/CheckSaveData';
 import NavButton from '../../components/NavButton';
 
 
@@ -33,6 +34,7 @@ function ShowResult() {
                 </ResultItem>
             </ResultContainer>
 
+            <CheckSaveData></CheckSaveData>
             <Link to='/'>
                 <NavButton type='next'>Reiniciar</NavButton>
             </Link>
