@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 
-import GlobalStyles from './global/GlobalStyles';
+import { GlobalStyles } from './global/GlobalStyles';
 import RoutesManager from './routes';
 
 function App() {
