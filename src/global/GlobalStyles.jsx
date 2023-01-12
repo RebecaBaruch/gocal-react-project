@@ -21,5 +21,6 @@ export const Wrapper = styled.div`
     justify-content: start;
     flex-direction: column;
     gap: 18px;
+    padding: 2rem;
     width: 100%;
 `;
