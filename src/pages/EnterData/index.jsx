@@ -26,6 +26,13 @@ function EnterData() {
             <DataInput type='number' placeholder='Sua idade'/>
             <DataInput type='number' placeholder='Seu peso'/>
             <DataInput type='number' placeholder='Sua altura(cm)'/>
+            <InfoSelect>
+                <option value=''>Seu nível de atividade física</option>
+                <option value='01'>Muito ativo</option>
+                <option value='02'>Ativo</option>
+                <option value='03'>Irregularmente ativo</option>
+                <option value='04'>Sedentário</option>
+            </InfoSelect>
 
             <NavButton type='next'>Calcular</NavButton>
             <NavButton onClick={() => navigate(-1)}>Voltar</NavButton>

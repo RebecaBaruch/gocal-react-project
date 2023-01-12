@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Vector from '../../assets/Vector.svg';
 
 export const Select = styled.select`
-    padding: 25px;
+    padding: 20px;
     width: 100%;    
 
     font-size: 1rem;
