@@ -6,10 +6,14 @@ export const Button = styled.button`
     
     font-size: 1rem;
     font-weight: 500;
-    color: #ffffff;
     
     border-radius: 5px;
     border: none;
     outline: none;
-    background-color: #37B874;
+
+    ${(props) => 
+        props.type == 'next' ?
+        'background-color: #37B874; color: #ffffff;' :
+        'background-color: transparent; color: #37B874;'
+    }
 `;

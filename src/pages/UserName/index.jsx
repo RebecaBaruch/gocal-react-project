@@ -16,7 +16,7 @@ function UserName() {
             </SubTitle>
             <DataInput type='text' placeholder='Digite o seu nome' />
             <Link to='../EnterData'>
-                <NavButton>Avançar</NavButton>
+                <NavButton type='next'>Avançar</NavButton>
             </Link>
         </Wrapper>
     );

@@ -1,9 +1,9 @@
 import { Button } from './styled';
 
-function NavButton({ children }) {
+function NavButton({ type,children, onClick }) {
 
     return(
-        <Button>{ children }</Button>
+        <Button type={ type } onClick={ onClick }>{ children }</Button>
     );
 };
 
