@@ -1,6 +1,8 @@
 import { Wrapper } from '../../global/GlobalStyles';
 import MainTitle from '../../components/MainTitle';
 import SubTitle from '../../components/SubTitle';
+import DataInput from '../../components/DataInput';
+import NavButton from '../../components/NavButton';
 
 
 function EnterData() {
@@ -11,7 +13,13 @@ function EnterData() {
             <SubTitle>
                 Vamos calcular o seu gasto
                 energético basal!
-            </SubTitle>            
+            </SubTitle>      
+
+            <DataInput type='number' placeholder='Sua idade'/>
+            <DataInput type='number' placeholder='Seu peso'/>
+            <DataInput type='number' placeholder='Sua altura(cm)'/>
+
+            <NavButton>Calcular</NavButton>
         </Wrapper>
     );
 };
