@@ -8,7 +8,10 @@ function UserName() {
 
     return(
         <Wrapper>
-            <SubTitle />
+            <SubTitle>
+                Para começar <br></br>
+                como podemos te chamar?
+            </SubTitle>
             <DataInput type='text' placeholder='Digite o seu nome' />
             <NavButton>Avançar</NavButton>
         </Wrapper>
