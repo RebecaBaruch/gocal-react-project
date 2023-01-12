@@ -1,8 +1,14 @@
+import { TitleBox, Title, ColoredTitle} from './styled';
 
 
+function MainTitle({ primaryText, markedText }) {
 
-function MainTitle() {
-
+    return(
+        <TitleBox>
+            <Title>{ primaryText }</Title>
+            <ColoredTitle>{ markedText }</ColoredTitle>
+        </TitleBox>
+    );
 };
 
 export default MainTitle;
