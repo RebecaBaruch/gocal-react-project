@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { Wrapper } from '../../global/GlobalStyles';
 import MainTitle from '../../components/MainTitle';
-import SubTitle from '../../components/SubTitle';
+import MarkedText from '../../components/MarkedText';
 import DataInput from '../../components/DataInput';
 import NavButton from '../../components/NavButton';
 import InfoSelect from '../../components/InfoSelect';
@@ -13,10 +13,10 @@ function EnterData() {
     return(
         <Wrapper>
             <MainTitle primaryText="Olá," markedText="Bruno Garcia" />
-            <SubTitle>
+            <MarkedText type='subtitle'>
                 Vamos calcular o seu gasto
                 energético basal!
-            </SubTitle>      
+            </MarkedText>      
 
             <InfoSelect>
                 <option value=''>Seu sexo</option>

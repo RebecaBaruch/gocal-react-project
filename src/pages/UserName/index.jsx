@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from 'react-router-dom'
 
 import { Wrapper } from '../../global/GlobalStyles';
-import SubTitle from "../../components/SubTitle";
+import MarkedText from "../../components/MarkedText";
 import DataInput from "../../components/DataInput";
 import NavButton from "../../components/NavButton";
 
@@ -10,10 +10,10 @@ function UserName() {
 
     return(
         <Wrapper>
-            <SubTitle>
+            <MarkedText type='subtitle'>
                 Para começar <br></br>
                 como podemos te chamar?
-            </SubTitle>
+            </MarkedText>
             <DataInput type='text' placeholder='Digite o seu nome' />
             <Link to='../EnterData'>
                 <NavButton type='next'>Avançar</NavButton>

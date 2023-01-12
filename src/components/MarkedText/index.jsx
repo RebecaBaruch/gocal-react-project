@@ -1,10 +1,10 @@
 import { Text } from './styled';
 
-function MarkedText({ children }) {
+function MarkedText({ type, marked, children }) {
 
     return(
-        <Text>
-            { children }
+        <Text type={ type } marked={ marked }>
+             { children } 
         </Text>
     );
 }
