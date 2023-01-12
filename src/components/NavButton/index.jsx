@@ -1,7 +1,10 @@
+import { Button } from './styled';
 
+function NavButton({ children }) {
 
-function NavButton() {
-
+    return(
+        <Button>{ children }</Button>
+    );
 };
 
 export default NavButton;
