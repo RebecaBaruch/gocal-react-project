@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from 'react-router-dom'
+
 import { Wrapper } from '../../global/GlobalStyles';
 import SubTitle from "../../components/SubTitle";
 import DataInput from "../../components/DataInput";
@@ -13,7 +15,9 @@ function UserName() {
                 como podemos te chamar?
             </SubTitle>
             <DataInput type='text' placeholder='Digite o seu nome' />
-            <NavButton>Avançar</NavButton>
+            <Link to='../EnterData'>
+                <NavButton>Avançar</NavButton>
+            </Link>
         </Wrapper>
     );
 };
