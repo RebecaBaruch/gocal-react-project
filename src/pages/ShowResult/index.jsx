@@ -1,5 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { Wrapper } from '../../global/GlobalStyles';
+import { ResultContainer } from './styled';
 import MainTitle from '../../components/MainTitle';
 import ResultItem from '../../components/ResultItem';
 import MarkedText from '../../components/MarkedText';
@@ -13,10 +14,24 @@ function ShowResult() {
         <Wrapper>
             <MainTitle primaryText="Aqui está o seu" markedText="resultado" />
 
-            <ResultItem>
-                Seu <MarkedText>metabolismo basal</MarkedText> é de:
-                <MarkedText marked='green-marked'> 1606 calorias.</MarkedText>
-            </ResultItem>
+            <ResultContainer>
+                <ResultItem>
+                    Seu <MarkedText>metabolismo basal</MarkedText> você precisa consumir em média:
+                    <MarkedText marked='green-marked'> 1606 calorias.</MarkedText>
+                </ResultItem>
+                <ResultItem>
+                    Para <MarkedText>manter o seu peso</MarkedText> você precisa consumir em média:
+                    <MarkedText marked='green-marked'> 1606 calorias.</MarkedText>
+                </ResultItem>
+                <ResultItem>
+                    Para <MarkedText>perder peso</MarkedText> você precisa consumir em média: <br></br>
+                    <MarkedText marked='green-marked'> 1606 calorias.</MarkedText>
+                </ResultItem>
+                <ResultItem>
+                    Para <MarkedText>ganhar peso</MarkedText> você precisa consumir em média:
+                    <MarkedText marked='green-marked'> 1606 calorias.</MarkedText>
+                </ResultItem>
+            </ResultContainer>
 
             <Link to='/'>
                 <NavButton type='next'>Reiniciar</NavButton>

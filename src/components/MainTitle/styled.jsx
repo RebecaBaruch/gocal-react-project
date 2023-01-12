@@ -9,11 +9,13 @@ export const TitleBox = styled.div`
 `;
 
 export const Title = styled.h1`
-    font-size: "2rem";
+    font-size: "2.2rem";
     color: #2C2C2C;
+    font-weight: 900;
 `
 
 export const ColoredTitle = styled.h1`
-    font-size: "2rem";
+    font-size: "2.2rem";
     color: #37B874;
+    font-weight: 900;
 `;
