@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Wrapper } from '../../global/GlobalStyles';
 import MainTitle from '../../components/MainTitle';
 import SubTitle from '../../components/SubTitle';
@@ -34,7 +34,9 @@ function EnterData() {
                 <option value='04'>Sedentário</option>
             </InfoSelect>
 
-            <NavButton type='next'>Calcular</NavButton>
+            <Link to='../ShowResult'>
+                <NavButton type='next'>Calcular</NavButton>
+            </Link>
             <NavButton onClick={() => navigate(-1)}>Voltar</NavButton>
         </Wrapper>
     );
