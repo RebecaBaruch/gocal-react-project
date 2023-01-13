@@ -34,7 +34,7 @@ function ShowResult() {
                 </ResultItem>
             </ResultContainer>
 
-            <CheckSaveData></CheckSaveData>
+            <CheckSaveData>Lembrar das minhas informações</CheckSaveData>
             <Link to='/Home'>
                 <NavButton type='next'>Reiniciar</NavButton>
             </Link>
