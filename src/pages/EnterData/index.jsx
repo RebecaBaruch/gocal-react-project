@@ -1,6 +1,10 @@
 import { useContext } from 'react';
 import { UserDataContext } from '../../providers/auth';
 import { Link, useNavigate } from 'react-router-dom';
+
+// import { firebase } from '../../config/firebase';
+// import { getDatabase, ref, set } from "firebase/database";
+
 import { Wrapper } from '../../global/GlobalStyles';
 import MainTitle from '../../components/MainTitle';
 import MarkedText from '../../components/MarkedText';
@@ -19,9 +23,13 @@ function EnterData() {
         });
     }
 
-    const handleShowData = () => {
-        console.log(userData);
-    }
+    // const handleSubmitData = () => {
+    //         const db = getDatabase();
+    //         set(ref(db, 'users/'), {
+    //           name: userData.name,
+    //         });
+    //     console.log(userData);
+    // }
 
     return(
         <Wrapper>
@@ -48,7 +56,7 @@ function EnterData() {
             </InfoSelect>
 
             <Link to='../ShowResult'>
-                <NavButton type='next' onClick={handleShowData}>Calcular</NavButton>
+                <NavButton type='next'>Calcular</NavButton>
             </Link>
             <NavButton onClick={() => navigate(-1)}>Voltar</NavButton>
         </Wrapper>
