@@ -1,4 +1,10 @@
+import { useContext } from 'react';
+import { UserDataContext } from '../../providers/auth';
 import { Link, useNavigate } from 'react-router-dom';
+
+// import { firebase } from '../../config/firebase';
+// import { getDatabase, ref, set } from "firebase/database";
+
 import { Wrapper } from '../../global/GlobalStyles';
 import MainTitle from '../../components/MainTitle';
 import MarkedText from '../../components/MarkedText';
@@ -9,6 +15,21 @@ import InfoSelect from '../../components/InfoSelect';
 
 function EnterData() {
     let navigate = useNavigate();
+    const {userData, setUserData} = useContext(UserDataContext);
+
+    const handleData = (e) => {
+        setUserData((prevState) => {
+            return  {...prevState, [e.target.name]: e.target.value}
+        });
+    }
+
+    // const handleSubmitData = () => {
+    //         const db = getDatabase();
+    //         set(ref(db, 'users/'), {
+    //           name: userData.name,
+    //         });
+    //     console.log(userData);
+    // }
 
     return(
         <Wrapper>
@@ -18,15 +39,15 @@ function EnterData() {
                 energético basal!
             </MarkedText>      
 
-            <InfoSelect>
+            <InfoSelect onChange={handleData} name='sex'>
                 <option value=''>Seu sexo</option>
                 <option value='feminino'>Feminino</option>
                 <option value='masculino'>Masculino</option>
             </InfoSelect>
-            <DataInput type='number' placeholder='Sua idade'/>
-            <DataInput type='number' placeholder='Seu peso'/>
-            <DataInput type='number' placeholder='Sua altura(cm)'/>
-            <InfoSelect>
+            <DataInput type='number' placeholder='Sua idade' onChange={handleData} name='age'/>
+            <DataInput type='number' placeholder='Seu peso'onChange={handleData} name='weight'/>
+            <DataInput type='number' placeholder='Sua altura(cm)' onChange={handleData} name='height'/>
+            <InfoSelect onChange={handleData} name='activityLevel'>
                 <option value=''>Seu nível de atividade física</option>
                 <option value='01'>Muito ativo</option>
                 <option value='02'>Ativo</option>

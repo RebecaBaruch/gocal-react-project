@@ -9,18 +9,37 @@ export const CheckMark = styled.span`
 
     border: 3px solid #1D9F5A;
     border-radius: 5px;
+    background-color: ${({ checked }) => checked ? 
+    
+        `#37B874` : 
+        'transparent'
+        };
+    }
 `;
 
-export const Checkbox = styled.input`
+// & :after{
+//     content: ""; 
+//     position: absolute; 
+//     width: 5px;
+//     height: 10px;
+//     border: solid white;
+//     border-width: 0 3px 3px 0;
+//     -webkit-transform: rotate(45deg);
+//     -ms-transform: rotate(45deg);
+//     transform: rotate(45deg);
+//     ${({ checked }) => checked ? 
+
+//         'display: block;':
+    
+//          `display: none;`   
+// };
+
+export const Checkbox = styled.input.attrs({type: 'checkbox'})`
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
-
-    & :checked ~ ${CheckMark} {
-        background-color: #37B874;
-      }
 `;
 
 export const LabelTxt = styled.span`
